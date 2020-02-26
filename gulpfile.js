@@ -60,8 +60,8 @@ gulp.task('iconfont', function(){
 	.pipe(gulp.dest('fonts/iconsfont/'));
 });
 
-gulp.task('watch', gulp.parallel('browser-sync', 'sass'), function() {
-	gulp.watch('scss/**/*.scss', gulp.parallel('sass'));
+gulp.task('watch', ['browser-sync', 'sass'], function() {
+	gulp.watch('scss/**/*.scss', ['sass']);
 	gulp.watch('*.html', browserSync.reload);
 	gulp.watch('js/**/*.js', browserSync.reload);
 });

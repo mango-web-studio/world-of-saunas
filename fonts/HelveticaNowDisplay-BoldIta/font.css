@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'HelveticaNowDisplay-BoldIta';
+  src: url('HelveticaNowDisplay-BoldIta.eot');
+  src: url('HelveticaNowDisplay-BoldIta.eot?#iefix') format('embedded-opentype'),
+       url('HelveticaNowDisplay-BoldIta.svg#HelveticaNowDisplay-BoldIta') format('svg'),
+       url('HelveticaNowDisplay-BoldIta.ttf') format('truetype'),
+       url('HelveticaNowDisplay-BoldIta.woff') format('woff'),
+       url('HelveticaNowDisplay-BoldIta.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+

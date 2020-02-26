@@ -72,6 +72,12 @@
 			@content;
 		}
 	}
+	// 0 - 1279
+	@if $media == desktop {
+		@media only screen and (max-width: $desktop - 1) {
+			@content;
+		}
+	}
 }
 
 // @mixin respond-to($media) {
