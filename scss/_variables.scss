@@ -4,17 +4,27 @@ $mobile-landscape: 480px;
 $tablet-portrait: 768px;
 $tablet-plus: 992px;
 $tablet-landscape: 1024px;
-// $desktop: 1280px;
-$desktop: 1440px;
+$desktop: 1280px;
+$desktop_plus: 1440px;
 // SIZE
 $base_font_size: 10px;
+$header_height: 90px;
 // WIDTH
-$site_width: 1440px;
+$site_width: calc(100% - 370px);
+$padding_x: 0 15px;
 // COLOR
 $white_0: #fff;
 
 $black_0: #000;
 
-$gray_0: #333;
+$gray_0: #333333;
+$gray_1: #545454;
+$gray_2: #353535;
+$gray_3: #8F8F8F;
+$gray_4: #222222;
+$gray_5: #494949;
+$gray_6: #636363;
+$gray_7: #3A3A3A;
+$gray_8: #0E0E0E;
 
 $yellow_0: #F4C51F;

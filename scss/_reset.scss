@@ -13,6 +13,19 @@ body, h1, h2, h3, h4, h5, h6, p, ul, li {
 
 body {
 	font-family: 'Helvetica Neue', 'Arial', sans-serif;
+	// display: grid;
+	// grid-template-columns: $header_height auto;
+	// grid-template-rows: $header_height auto;
+	// grid-template-areas: 
+	// 	"side header header"
+	// 	"side main main"
+	// 	"side footer footer";
+	background-color: $black_0;
+	-ms-overflow-style: none;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
 }
 
 ul, li {
@@ -42,4 +55,17 @@ textarea {
 	margin: 0;
 	border-radius: 0;
 	appearance: none;
+}
+
+// 0 - 1439
+@include respond-to(desktop_plus) {
+
+	html {
+		font-size: 8px;
+	}
+	
+    // body {
+	// 	grid-template-columns: 70px auto;
+	// 	grid-template-rows: 70px auto;
+    // }
 }

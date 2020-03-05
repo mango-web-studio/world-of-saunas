@@ -3,4 +3,13 @@
 @import "extends.scss";
 @import "mixins.scss";
 @import "reset.scss";
-@import "header/header.scss";
+// Header
+@import "general/header/header.scss";
+// Side
+@import "general/side/side.scss";
+// Main
+@import "general/main/main.scss";
+// Footer
+@import "general/footer/footer.scss";
+// Home
+@import "home/home.scss";

@@ -1,0 +1,21 @@
+.main {
+    // grid-area: main;
+    width: calc(100% - 90px);
+    margin-left: auto;
+}
+
+// 0 - 1439
+@include respond-to(desktop_plus) {
+
+    .main {
+        width: calc(100% - 70px);
+    }
+}
+
+// 0 - 767
+@include respond-to(mobile) {
+
+    .main {
+        width: 100%;
+    }
+}
