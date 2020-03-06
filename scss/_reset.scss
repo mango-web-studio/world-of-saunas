@@ -60,12 +60,28 @@ textarea {
 // 0 - 1439
 @include respond-to(desktop_plus) {
 
-	html {
-		font-size: 8px;
-	}
-	
     // body {
 	// 	grid-template-columns: 70px auto;
 	// 	grid-template-rows: 70px auto;
-    // }
+	// }
+
+	html {
+		font-size: 8px;
+	}
+}
+
+// 0 - 1023
+@include respond-to(tablet) {
+
+	html {
+		font-size: 7px;
+	}
+}
+
+// 0 - 479
+@include respond-to(mobile_small) {
+
+	html {
+		font-size: 6px;
+	}
 }

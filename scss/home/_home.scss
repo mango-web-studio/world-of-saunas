@@ -1,6 +1,82 @@
+@keyframes shake {
+    0% { transform: translateY(1px) }
+    10% { transform: translateY(-1px) }
+    20% { transform: translateY(-3px) }
+    30% { transform: translateY(3px) }
+    40% { transform: translateY(1px) }
+    50% { transform: translateY(-1px) }
+    60% { transform: translateY(-3px) }
+    70% { transform: translateY(3px) }
+    80% { transform: translateY(-1px) }
+    90% { transform: translateY(1px) }
+    100% { transform: translateY(1px) }
+}
+
 .home {
 
     &__slider {
+        position: relative;
+
+        &_scroll {
+            position: absolute;
+            bottom: 9%;
+            right: 185px;
+            width: 17px;
+            z-index: 1;
+            animation: shake 2s infinite;
+
+            &_svg {
+                fill: none;
+
+                rect {
+                    stroke: $white_0;
+                }
+            }
+        }
+
+        &_arrows  {
+            position: absolute;
+            bottom: 9%;
+            left: 185px;
+            display: flex;
+            align-items: flex-end;
+            z-index: 1;
+        }
+
+        &_prev  {
+            width: 100px;
+            margin-right: 20px;
+            cursor: pointer;
+            z-index: 1;
+            transition: 0.2s;
+
+            &.slick-disabled {
+                width: 50px;
+                cursor: default;
+                opacity: 0.3;
+            }
+
+            &_svg {
+                fill: $white_0;
+            }
+        }
+
+        &_next  {
+            width: 100px;
+            cursor: pointer;
+            z-index: 1;
+            transition: 0.2s;
+
+            &.slick-disabled {
+                width: 50px;
+                cursor: default;
+                opacity: 0.3;
+            }
+
+            &_svg {
+                fill: $white_0;
+            }
+        }
 
         &_item {
             position: relative;
@@ -592,15 +668,56 @@
     }
 }
 
+// 0 - 1279
+@include respond-to(desktop) {
+
+    .home {
+
+        &__slider {
+
+            &_scroll {
+                right: 90px;
+            }
+
+            &_arrows {
+                left: 15px;
+            }
+
+            &_item {
+
+                &_content {
+                    max-width: none;
+                    padding: 0 $padding_x;
+                }
+            }
+        }
+    }
+}
+
 // 0 - 1023
 @include respond-to(tablet) {
 
     .home {
 
+        &__slider {
+
+            &_item {
+                height: calc(100vh - 56px);
+            }
+        }
+
+        &__construction {
+
+            &_list {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                max-width: none;
+            }
+        }
+
         &__reviews {
 
             &_inner {
-                max-width: unset;
+                max-width: none;
             }
 
             &_comment {
@@ -634,26 +751,25 @@
     }
 }
 
-// 0 - 1023
-@include respond-to(tablet) {
+// 0 - 767
+@include respond-to(mobile) {
 
     .home {
 
         &__slider {
 
-            &_item {
+            &_arrows {
+                display: none;
+            }
 
-                &_content {
-                    max-width: none;
-                    padding: $padding_x;
-                }
+            &_scroll {
+                display: none;
             }
         }
 
         &__construction {
 
             &_list {
-                max-width: none;
                 display: flex;
                 overflow-y: hidden;
                 padding: 0 15px 50px;

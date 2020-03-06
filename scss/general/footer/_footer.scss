@@ -18,7 +18,11 @@
         }
 
         &_item {
-            max-width: 290px;
+            padding-right: 10px;
+
+            &:last-child {
+                padding-right: 0;
+            }
         }
 
         &_title {
@@ -98,6 +102,39 @@
             &_svg {
                 fill: $gray_0;
                 transition: 0.2s;
+            }
+        }
+    }
+}
+
+// 0 - 1279
+@include respond-to(desktop) {
+
+    .footer {
+
+        &__inner {
+            width: 100%;
+            padding: 0 $padding_x;
+        }
+    }
+}
+
+// 0 - 767
+@include respond-to(mobile) {
+
+    .footer {
+        width: 100%;
+
+        &__top {
+
+            &_list {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+                grid-gap: 20px;
+            }
+
+            &_title {
+                margin-bottom: 20px;
             }
         }
     }
