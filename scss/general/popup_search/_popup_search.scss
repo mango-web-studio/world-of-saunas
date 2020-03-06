@@ -1,0 +1,103 @@
+.popup_search {
+    position: fixed;
+    right: 0;
+    bottom: 100%;
+    width: calc(100% - 90px);
+    height: calc(100% - 90px);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, #000000 53.12%, rgba(0, 0, 0, 0.8) 100%);
+    z-index: 1;
+    transition: 0.2s;
+
+    &_close {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        width: 24px;
+        cursor: pointer;
+
+        &:hover {
+
+            .popup_search_close_svg {
+                fill: $yellow_0;
+            }
+        }
+
+        &_svg {
+            fill: $white_0;
+        }
+    }
+
+    &_inner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 65.57%;
+    }
+
+    &_label {
+        position: relative;
+        display: block;
+        width: 100%;
+    }
+
+    &_input {
+        @include font(44px, 80px, 'Montserrat-Regular');
+
+        width: 100%;
+        padding: 0;
+        border: 0;
+        border-bottom: 1px solid $white_0;
+        margin-bottom: 10px;
+        background-color: transparent;
+        color: $white_0;
+
+        &::placeholder {
+            transition: 0.2s;
+        }
+
+        &:focus {
+
+            &::placeholder {
+                color: transparent;
+            }
+        }
+    }
+
+    &_lens {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 26px;
+        cursor: pointer;
+
+        &_svg {
+            fill: $white_0;
+        }
+    }
+
+    &_hint {
+        @include font(14px, 20px, 'Montserrat-Regular');
+
+        color: $gray_9;
+    }
+}
+
+// 0 - 1439
+@include respond-to(desktop_plus) {
+
+    .popup_search {
+        width: calc(100% - 70px);
+        height: calc(100% - 70px);
+    }
+}
+
+// 0 - 767
+@include respond-to(mobile) {
+
+    .popup_search {
+        width: 100%;
+        height: calc(100% - 56px);
+    }
+}

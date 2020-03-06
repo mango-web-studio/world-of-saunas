@@ -1,5 +1,6 @@
-$( document ).ready(
-    function(){
+$(document).ready(function(){
+
+        // Home sliders
         if ($('.home__slider_list')) {
             $('.home__slider_list').slick({
                 infinite: true,
@@ -37,5 +38,16 @@ $( document ).ready(
                 // },
             });
         }
+
+        // Popup Search
+        $('#header__popup_search_btn').click(function(e) {
+            $('#popup_search').css({ "bottom": "0" });
+        });
+        $('#side__popup_search_btn').click(function(e) {
+            $('#popup_search').css({ "bottom": "0" });
+        });
+        $('.popup_search_close').click(function(e) {
+            $('.popup_search').css({ "bottom": "100%" });
+        });
     }
 );

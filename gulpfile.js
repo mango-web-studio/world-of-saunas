@@ -33,7 +33,7 @@ function styles() {
 
 function watch() {
     gulp.watch(paths.styles.src, styles).on('change', browserSync.reload);
-    // gulp.watch(paths.scripts.src, scripts);
+    gulp.watch(paths.scripts.src).on('change', browserSync.reload);
     gulp.watch(paths.html.src).on('change', browserSync.reload);
 }
 

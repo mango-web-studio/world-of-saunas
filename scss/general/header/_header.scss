@@ -1,11 +1,13 @@
 .header {
     // grid-area: header;
+    position: relative;
     display: flex;
     justify-content: space-between;
     width: calc(100% - 90px);
     margin-left: auto;
     height: 90px;
     background-color: $black_0;
+    z-index: 2;
 
     &__logo {
         width: 185px;
@@ -78,7 +80,7 @@
         width: calc(100% + 2px);
         opacity: 0;
         visibility: hidden;
-        z-index: 1;
+        z-index: 2;
         transition: 0.2s;
 
         &_list {
