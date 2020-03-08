@@ -107,6 +107,14 @@
     }
 }
 
+// 0 - 1439
+@include respond-to(desktop_plus) {
+
+    .footer {
+        width: calc(100% - 70px);
+    }
+}
+
 // 0 - 1279
 @include respond-to(desktop) {
 

@@ -387,8 +387,15 @@
                     color: transparent;
                 }
             }
+
+            &:-webkit-autofill,
+            &:-webkit-autofill:hover,
+            &:-webkit-autofill:focus {
+                -webkit-text-fill-color: $yellow_0;
+                box-shadow: 0 0 0px 1000px $black_0 inset;
+            }
         }
-        
+
         &_button {
             @include font(16px, 32px, 'Montserrat-Bold');
 
@@ -716,6 +723,63 @@
                 padding: 0 $padding_x;
             }
         }
+
+        &__communication {
+
+            &_inner {
+                max-width: none;
+                padding: 0 $padding_x;
+            }
+
+            &_title {
+                font-size: 4.5rem;
+            }
+        }
+
+        &__about {
+
+            &_header {
+
+                &_title {
+                    margin-left: 18.8%;
+                }
+            }
+
+            &_article {
+                max-width: none;
+                padding: 0 $padding_x 45px;
+            }
+        }
+
+        &__advantages {
+
+            &_inner {
+                max-width: none;
+                padding: 55px $padding_x;
+            }
+        }
+        
+        &__reviews {
+
+            &_inner {
+                max-width: none;
+                padding: 55px $padding_x;
+            }
+
+            &_comment {
+
+                &_item {
+
+                    &:nth-last-child(2) {
+                        
+                        .home__reviews_comment_text {
+                            left: unset;
+                            right: 50%;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -740,15 +804,10 @@
 
         &__reviews {
 
-            &_inner {
-                max-width: none;
-            }
-
             &_comment {
 
                 &_list {
                     overflow-y: hidden;
-                    padding-bottom: 15px;
                     -ms-overflow-style: none;
 
                     &::-webkit-scrollbar {
@@ -770,6 +829,30 @@
                     padding: 20%;
                     overflow-y: scroll;
                 }
+            }
+        }
+
+        &__communication {
+
+            &_title {
+                font-size: 4.3rem;
+                line-height: 4.3rem;
+            }
+        }
+        
+        &__advantages {
+
+            &_inner {
+                flex-direction: column;
+            }
+
+            &_title {
+                width: auto;
+                margin-bottom: 60px;
+            }
+
+            &_description {
+                width: auto;
             }
         }
     }
@@ -825,6 +908,10 @@
                 margin-right: 30px;
                 min-width: 200px;
                 width: 35%;
+
+                &:last-child {
+                    margin-right: 0;
+                }
             }
 
             &_title {
@@ -855,6 +942,140 @@
                 width: 100%;
                 font-size: 2rem;
                 line-height: 3rem;
+            }
+
+            &_slider {
+                padding: 0;
+
+                &_prev,
+                &_next {
+                    display: none;
+                }
+
+                &_list {
+                    margin: 0;
+                }
+
+                &_item {
+                    padding: 0 15px;
+                }
+            }
+        }
+
+        &__communication {
+
+            &_category {
+                display: none;
+            }
+
+            &_form_wrap {
+                flex-direction: column;
+                width: 100%;
+                max-width: 600px;
+                margin: 0 auto;
+            }
+
+            &_title {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+
+            &_form {
+                width: 100%;
+            }
+
+            &_input {
+                margin-bottom: 15px;
+                font-size: 1.8rem;
+            }
+        }
+
+        &__about {
+
+            &_header {
+                margin-bottom: 45px;
+
+                &_photo {
+                    height: 140px;
+                }
+
+                &_title {
+                    padding: 0 $padding_x;
+                    margin-left: 0;
+                    margin-top: -30px;
+                    font-size: 7.5rem;
+                    line-height: 7.5rem;
+                }
+            }
+
+            &_article {
+                padding-bottom: 0;
+                border-bottom: 0;
+
+                &_title {
+                    display: none;
+                }
+
+                &_description {
+                    width: 100%;
+                    padding-bottom: 45px;
+                    border-bottom: 1px solid $gray_2;
+                }
+
+                
+                &_paragraph {
+                    flex-direction: column;
+                    margin-bottom: 35px;
+
+                    &_text {
+                        width: 100%;
+                        margin-bottom: 35px;
+                        font-size: 1.8rem;
+                        line-height: 3rem;
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+
+                &_link {
+                    font-size: 2.3rem;
+                    line-height: 3.6rem;
+                }
+            }
+        }
+
+        &__advantages {
+
+            &_inner {
+                padding-bottom: 0;
+                border-bottom: 0;
+            }
+
+            &_description {
+                padding-bottom: 50px;
+                border-bottom: 1px solid $gray_2;
+            }
+        }
+
+        &__reviews {
+
+            &_title {
+                margin-bottom: 45px;
+            }
+
+            &_comment {
+                
+                &_firstname {
+                    font-size: 1.8rem;
+                    line-height: 2.6rem;
+                }
+
+                &_surname {
+                    font-size: 1.5rem;
+                    line-height: 2.4rem;
+                }
             }
         }
     }
@@ -893,10 +1114,36 @@
 
         &__reviews {
 
+            &_subtitle {
+                display: none;
+            }
+
             &_comment {
 
                 &_item {
-                    margin-right: 5%;
+                    margin-right: 10%;
+                }
+            }
+        }
+
+        &__advantages {
+            background-image: none;
+
+            &_list {
+                overflow-y: hidden;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+            }
+
+            &_item {
+                width: 69%;
+                flex-shrink: 0;
+                margin-right: 15px;
+
+                &:last-child {
+                    margin-right: 0;
                 }
             }
         }

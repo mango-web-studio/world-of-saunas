@@ -97,11 +97,41 @@
     }
 }
 
+// 0 - 1023
+@include respond-to(tablet) {
+
+    .popup_search {
+
+        &_inner {
+            width: 90%;
+        }
+    }
+}
+
 // 0 - 767
 @include respond-to(mobile) {
 
     .popup_search {
         width: 100%;
         height: calc(100% - 56px);
+    }
+}
+
+// 0 - 479
+@include respond-to(mobile_small) {
+
+    .popup_search {
+
+        &_lens {
+            width: 20px;
+        }
+
+        &_input {
+            font-size: 3.5rem;
+        }
+
+        &_hint {
+            display: none;
+        }
     }
 }
