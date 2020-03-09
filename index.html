@@ -256,46 +256,65 @@
 	</header>
 	<!-- Popup search -->
 	<div id="popup_search" class="popup_search">
-		<div id="popup_search_close" class="popup_search_close">
-			<svg class="popup_search_close_svg" width="25" height="25" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
+		<div id="popup_search__close" class="popup_search__close">
+			<svg class="popup_search__close_svg" width="25" height="25" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
 				<path d="M1.41421 4.76837e-07L24.0416 22.6274L22.6274 24.0416L0 1.41421L1.41421 4.76837e-07Z" />
 				<path d="M24.0416 1.41421L1.41421 24.0416L1.19209e-07 22.6274L22.6274 0L24.0416 1.41421Z" />
 			</svg>
 		</div>
-		<div class="popup_search_inner">
-			<label class="popup_search_label">
-				<div class="popup_search_lens">
-					<svg class="popup_search_lens_svg" width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+		<div class="popup_search__inner">
+			<label class="popup_search__label">
+				<div class="popup_search__lens">
+					<svg class="popup_search__lens_svg" width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
 						<path d="M5.28454 0C2.37073 0 0 2.37073 0 5.28455C0 8.19853 2.37073 10.5691 5.28454 10.5691C8.19853 10.5691 10.5691 8.19853 10.5691 5.28455C10.5691 2.37073 8.19853 0 5.28454 0ZM5.28454 9.59351C2.90862 9.59351 0.975609 7.6605 0.975609 5.28457C0.975609 2.90864 2.90862 0.975609 5.28454 0.975609C7.66047 0.975609 9.59348 2.90862 9.59348 5.28455C9.59348 7.66048 7.66047 9.59351 5.28454 9.59351Z" />
 						<path d="M11.8571 11.1673L9.06032 8.37056C8.86975 8.17999 8.56113 8.17999 8.37056 8.37056C8.17999 8.56097 8.17999 8.86992 8.37056 9.06033L11.1673 11.8571C11.2626 11.9524 11.3873 12 11.5122 12C11.6369 12 11.7618 11.9524 11.8571 11.8571C12.0476 11.6667 12.0476 11.3577 11.8571 11.1673Z" />
 					</svg>
 				</div>
-				<input type="text" class="popup_search_input" name="popup_search_input" id="popup_search_input" placeholder="Що бажаєте знайти?">
+				<input type="text" class="popup_search__input" name="popup_search__input" id="popup_search__input" placeholder="Що бажаєте знайти?">
 			</label>
-			<p class="popup_search_hint">
+			<p class="popup_search__hint">
 				Для швидкого пошуку натисніть клавішу [ Enter ] після введеня тексту. Для відміни натисніть на клавішу [ ESC ]
 			</p>
 		</div>
 	</div>
 	<!-- Popup callback -->
 	<div id="popup_callback" class="popup_callback">
-		<div class="popup_callback_inner">
-			<div id="popup_callback_close" class="popup_callback_close">
-				<svg class="popup_callback_close_svg" width="25" height="25" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
+		<div class="popup_callback__inner">
+			<div id="popup_callback__close" class="popup_callback__close">
+				<svg class="popup_callback__close_svg" width="25" height="25" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
 					<path d="M1.41421 4.76837e-07L24.0416 22.6274L22.6274 24.0416L0 1.41421L1.41421 4.76837e-07Z" />
 					<path d="M24.0416 1.41421L1.41421 24.0416L1.19209e-07 22.6274L22.6274 0L24.0416 1.41421Z" />
 				</svg>
 			</div>
-			<div class="popup_callback_form">
-				<p class="popup_callback_title">
+			<div class="popup_callback__form">
+				<p class="popup_callback__title">
 					Замов зворотній дзвінок
 				</p>
-				<input class="popup_callback_input" type="text" name="popup_callback_name" id="popup_callbackname" placeholder="Ім'я">
-				<input class="popup_callback_input" type="tel" name="popup_callback_phone" id="popup_callback_phone" placeholder="Телефон*" required>
-				<input class="popup_callback_input" type="text" name="popup_callback_message" id="popup_callback_message" placeholder="Повідомлення">
-				<button class="popup_callback_button">
+				<input class="popup_callback__input" type="text" name="popup_callback_name" id="popup_callback__name" placeholder="Ім'я">
+				<input class="popup_callback__input" type="tel" name="popup_callback_phone" id="popup_callback__phone" placeholder="Телефон*" required>
+				<input class="popup_callback__input" type="text" name="popup_callback_message" id="popup_callback__message" placeholder="Повідомлення">
+				<button class="popup_callback__button">
 					Замовити дзвінок
 				</button>
+			</div>
+		</div>
+	</div>
+	<!-- Popup thanks -->
+	<div id="popup_thanks" class="popup_thanks">
+		<div class="popup_thanks__inner">
+			<div id="popup_thanks__close" class="popup_thanks__close">
+				<svg class="popup_thanks__close_svg" width="25" height="25" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
+					<path d="M1.41421 4.76837e-07L24.0416 22.6274L22.6274 24.0416L0 1.41421L1.41421 4.76837e-07Z" />
+					<path d="M24.0416 1.41421L1.41421 24.0416L1.19209e-07 22.6274L22.6274 0L24.0416 1.41421Z" />
+				</svg>
+			</div>
+			<div class="popup_thanks__content">
+				<p class="popup_thanks__title">
+					Дякуємо за заявку!
+				</p>
+				<p class="popup_thanks__description">
+					Наш менеджер зателефонує Вам найближчим часом!
+				</p>
 			</div>
 		</div>
 	</div>

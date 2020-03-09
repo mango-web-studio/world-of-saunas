@@ -1,0 +1,94 @@
+.popup_thanks {
+    // display: flex;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: $black_1;
+    z-index: 9;
+
+    &.visible {
+        display: flex;
+    }
+
+    &__inner {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 630px;
+        min-height: 436px;
+        padding: 75px;
+        background-color: $yellow_0;
+    }
+
+    &__close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 35px;
+        padding: 10px;
+        background-color: $yellow_1;
+        cursor: pointer;
+
+        &_svg {
+            fill: $yellow_0;
+        }
+    }
+
+    &__title {
+        @include font(45px, 55px, 'Montserrat-Bold');
+
+        margin-bottom: 15px;
+        color: $black_0;
+        text-align: center;
+    }
+
+    &__description {
+        @include font(21px, 30px, 'Montserrat-Regular');
+
+        color: $black_0;
+        text-align: center;
+    }
+
+}
+
+// 0 - 1439
+@include respond-to(desktop_plus) {
+
+    .popup_thanks {
+
+        &__inner {
+            min-height: 401px;
+        }
+    }
+}
+
+// 0 - 1023
+@include respond-to(tablet) {
+
+    .popup_thanks {
+
+        &__inner {
+            min-height: 386px;
+        }
+    }
+}
+
+// 0 - 767
+@include respond-to(mobile) {
+
+    .popup_thanks {
+
+        &__inner {
+            max-width: unset;
+            height: 100%;
+            padding: 0 $padding_x;
+        }
+    }
+}

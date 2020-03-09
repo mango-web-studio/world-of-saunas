@@ -14,7 +14,7 @@
         display: flex;
     }
 
-    &_inner {
+    &__inner {
         position: relative;
         width: 100%;
         max-width: 630px;
@@ -22,7 +22,7 @@
         background-color: $yellow_0;
     }
 
-    &_close {
+    &__close {
         position: absolute;
         top: 0;
         right: 0;
@@ -36,19 +36,19 @@
         }
     }
 
-    &_form {
+    &__form {
         display: flex;
         flex-direction: column;
     }
 
-    &_title {
+    &__title {
         @include font(21px, 30px, 'Montserrat-Bold');
 
         margin-bottom: 40px;
         color: $black_0;
     }
 
-    &_input {
+    &__input {
         @include font(14px, 36px, 'Montserrat-Regular');
 
         padding: 0;
@@ -80,7 +80,7 @@
         }
     }
     
-    &_button {
+    &__button {
         @include font(16px, 24px, 'Montserrat-Bold');
 
         align-self: flex-start;
@@ -104,29 +104,28 @@
 
     .popup_callback {
 
-        &_inner {
+        &__inner {
             display: flex;
             align-items: center;
-            width: 100%;
             max-width: unset;
             height: 100%;
             padding: 0 $padding_x;
         }
 
-        &_form {
+        &__form {
             width: 100%;
         }
 
-        &_title {
+        &__title {
             font-size: 3.7rem;
             line-height: 4.5rem;
         }
 
-        &_input {
+        &__input {
             font-size: 1.8rem;
         }
 
-        &_button {
+        &__button {
             font-size: 2.4rem;
             line-height: 4rem;
         }

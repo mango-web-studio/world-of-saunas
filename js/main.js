@@ -81,7 +81,7 @@ $(document).ready(function(){
                 ? $('body').css({ overflow: 'hidden' })
                 : $('body').css({ overflow: 'visible' });
         });
-        $('#popup_search_close').click(function() {
+        $('#popup_search__close').click(function() {
             $('#popup_search').toggleClass('visible');
             $('#popup_search').hasClass('visible')
                 ? $('body').css({ overflow: 'hidden' })
@@ -95,7 +95,7 @@ $(document).ready(function(){
                 ? $('body').css({ overflow: 'hidden' })
                 : $('body').css({ overflow: 'visible' });
         });
-        $('#popup_callback_close').click(function() {
+        $('#popup_callback__close').click(function() {
             $('#popup_callback').toggleClass('visible');
             $('#popup_callback').hasClass('visible')
                 ? $('body').css({ overflow: 'hidden' })
