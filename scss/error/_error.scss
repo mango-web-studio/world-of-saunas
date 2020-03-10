@@ -1,0 +1,71 @@
+.error {
+    height: calc(100vh - 90px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__inner {
+        @include background(url("../img/error/404_bg.png"), center, center, contain);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        max-width: 880px;
+        min-height: 320px;
+    }
+
+    &__title {
+        @include font(38px, 40px, 'Montserrat-Bold');
+
+        margin-bottom: 25px;
+        color: $white_0;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    &__description {
+        @include font(18px, 30px, 'Montserrat-Regular');
+
+        color: $white_0;
+        text-align: center;
+    }
+
+    &__link {
+        color: $yellow_0;
+    }
+}
+
+// 0 - 1439
+@include respond-to(desktop_plus) {
+
+    .error {
+        height: calc(100vh - 70px);
+    }
+}
+
+// 0 - 1023
+@include respond-to(tablet) {
+
+    .error {
+        height: calc(100vh - 56px);
+    }
+}
+
+// 0 - 767
+@include respond-to(mobile) {
+
+    .error {
+        min-height: 120px;
+        padding: 0 $padding_x;
+
+        &__title {
+            font-size: 3.2rem;
+            margin-bottom: 10px;
+        }
+
+        &__description {
+            font-size: 2rem;
+        }
+    }
+}
