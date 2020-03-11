@@ -334,85 +334,8 @@
             color: $gray_5;
         }
 
-        &_form_wrap {
-            display: flex;
-            justify-content: space-between;
-            width: 82.2%;
-        }
-
-        &_title {
-            @include font(50px, 50px, 'Montserrat-Medium');
-
-            width: 44.52%;
-            color: $white_0;
-
-            &_span {
-                display: block;
-
-                &--color {
-                    color: $yellow_0;
-                }
-            }
-        }
-
         &_form {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            width: 43.15%;
-        }
-
-        &_input {
-            @include font(14px, 32px, 'Montserrat-Regular');
-
-            padding: 0;
-            border: 0;
-            border-bottom: 1px solid $gray_6;
-            background-color: transparent;
-            color: $yellow_0;
-            transition: 0.2s;
-
-            &:hover {
-                border-bottom: 1px solid $yellow_0;
-            }
-
-            &::placeholder {
-                color: $gray_6;
-            }
-
-            &:focus {
-                border-bottom: 1px solid $yellow_0;
-
-                &::placeholder {
-                    color: transparent;
-                }
-            }
-
-            &:-webkit-autofill,
-            &:-webkit-autofill:hover,
-            &:-webkit-autofill:focus {
-                -webkit-text-fill-color: $yellow_0;
-                box-shadow: 0 0 0px 1000px $black_0 inset;
-            }
-        }
-
-        &_button {
-            @include font(16px, 32px, 'Montserrat-Bold');
-
-            align-self: flex-start;
-            padding: 0;
-            border: 0;
-            border: 1px solid transparent;
-            border-bottom: 1px solid $yellow_0;
-            background-color: transparent;
-            color: $yellow_0;
-            cursor: pointer;
-            transition: 0.2s;
-
-            &:hover,
-            &:focus {
-                border: 1px solid $yellow_0;
-            }
+            width: 82.2%;
         }
     }
 

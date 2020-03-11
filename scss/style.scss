@@ -19,6 +19,13 @@
 @import "general/main/main.scss";
 // Footer
 @import "general/footer/footer.scss";
+// Form
+@import "general/form/form.scss";
+// Breadcrumb
+@import "general/breadcrumb/breadcrumb.scss";
+// Paragraph with columns
+@import "general/paragraph_col/paragraph_col.scss";
+
 // Home
 @import "home/home.scss";
 // Error
@@ -27,3 +34,5 @@
 @import "contacts/contacts.scss";
 // Dealers
 @import "dealers/dealers.scss";
+// Service
+@import "service/service.scss";

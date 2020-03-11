@@ -12,36 +12,6 @@
         }
     }
 
-    &__breadcrumb {
-        margin-bottom: 7.5%;
-
-        &_list {
-            display: flex;
-        }
-
-        &_item {
-            @include font(14px, 20px, "Montserrat-Regular");
-
-            display: flex;
-            color: $gray_11;
-
-            & + .dealers__breadcrumb_item {
-
-                &:before {
-                    content: "/\00a0";
-                    padding: 0 7px;
-                    color: $gray_1;
-                }
-            }
-        }
-
-        &_link {
-            @include font(14px, 20px, "Montserrat-Regular");
-
-            color: $gray_1;
-        }
-    }
-
     &__header {
         margin-bottom: 16.67%;
 
