@@ -58,7 +58,8 @@
 
     &__contacts {
         width: 100%;
-        flex-grow: 1;
+        height: calc(100% - 100px);
+        // flex-grow: 1;
 
         &_list {
             display: flex;

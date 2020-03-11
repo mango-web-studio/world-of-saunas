@@ -11,6 +11,7 @@
 
     &__logo {
         width: 185px;
+        height: 100%;
         flex-shrink: 0;
 
         &_link {
@@ -122,13 +123,13 @@
 
     &__search_callback {
         display: flex;
+        align-items: stretch;
     }
 
     &__search {
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 100%;
         width: 90px;
         border-left: 1px solid $gray_0;
         cursor: pointer;
