@@ -1,0 +1,49 @@
+.production {
+
+    &__description {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 1460px;
+        margin: 0 auto 7.5%;
+
+        &_text {
+            @include font(14px, 26px, "Montserrat-Regular");
+
+            color: $white_0;
+            
+            &--color {
+                color: $yellow_0;
+            }
+
+            &--s {
+                width: 28.77%;
+            }
+
+            &--m {
+                width: 64.04%;
+            }
+        }
+    }
+
+    &__image {
+        max-height: 410px;
+        margin-bottom: 7.38%;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__paragraph {
+        padding: 0 $padding_x 7.38%;
+        border-bottom: 1px solid $gray_0;
+        margin-bottom: 7.38%;
+    }
+
+    &__form {
+        padding: 0 $padding_x 7.38%;
+    }
+}

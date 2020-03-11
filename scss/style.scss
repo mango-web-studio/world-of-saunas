@@ -23,6 +23,8 @@
 @import "general/form/form.scss";
 // Breadcrumb
 @import "general/breadcrumb/breadcrumb.scss";
+// Page head
+@import "general/page_head/page_head.scss";
 // Paragraph with columns
 @import "general/paragraph_col/paragraph_col.scss";
 
@@ -36,3 +38,5 @@
 @import "dealers/dealers.scss";
 // Service
 @import "service/service.scss";
+// Production
+@import "production/production.scss";

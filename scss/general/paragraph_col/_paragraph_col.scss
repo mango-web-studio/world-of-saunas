@@ -3,16 +3,26 @@
     max-width: 1460px;
     margin: 0 auto;
 
-    &__title {
-        @include font(60px, 65px, "Montserrat-Bold");
-
+    &__head {
         margin-bottom: 4.45%;
+    }
+
+    &__title {
+        @include font(60px, 65px, "Montserrat-Medium");
+
         color: $white_0;
+
+        &_span {
+
+            &--color {
+                color: $yellow_0;
+            }
+        }
     }
 
     &__list {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
         grid-gap: 3rem 6.16%;
     }
 

@@ -1,15 +1,16 @@
 .service {
 
     &__inner {
-        padding: 65px 15px;
+        padding: 0 15px 65px;
     }
 
     &__paragraph {
-        width: 100%;
-        max-width: 1460px;
-        margin: 0 auto;
-        padding-bottom: 5%;
+        padding: 0 $padding_x 5%;
         border-bottom: 1px solid $gray_0;
         margin-bottom: 5%;
+    }
+
+    &__form {
+        padding: 0 $padding_x 7.38%;
     }
 }
