@@ -2,6 +2,11 @@
     width: 100%;
     padding: 65px $padding_x;
 
+    &--bg_img {
+        min-height: 325px;
+        margin-bottom: 7.38%;
+    }
+
     &__title {
         @include font(60px, 65px, "Montserrat-Bold");
 

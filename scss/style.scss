@@ -3,6 +3,7 @@
 @import "extends.scss";
 @import "mixins.scss";
 @import "reset.scss";
+
 // Header
 @import "general/header/header.scss";
 // Side
@@ -25,6 +26,8 @@
 @import "general/breadcrumb/breadcrumb.scss";
 // Page head
 @import "general/page_head/page_head.scss";
+// Page description
+@import "general/page_description/page_description.scss";
 // Paragraph with columns
 @import "general/paragraph_col/paragraph_col.scss";
 
@@ -40,3 +43,5 @@
 @import "service/service.scss";
 // Production
 @import "production/production.scss";
+// Designing Russian baths
+@import "rus_baths/rus_baths.scss";

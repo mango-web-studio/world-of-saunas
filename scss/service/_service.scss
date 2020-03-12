@@ -5,9 +5,14 @@
     }
 
     &__paragraph {
-        padding: 0 $padding_x 5%;
-        border-bottom: 1px solid $gray_0;
+        padding: 0 $padding_x;
         margin-bottom: 5%;
+
+        &_inner {max-width: 1460px;
+            padding-bottom:  5%;
+            border-bottom: 1px solid $gray_0;
+            margin: 0 auto;
+        }
     }
 
     &__form {

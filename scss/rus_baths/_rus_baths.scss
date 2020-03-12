@@ -1,0 +1,47 @@
+.rus_baths {
+
+    .page_head--bg_img {
+        @include background(url("../img/rus_baths/head_bg.png"));
+    }
+
+    &__description {
+        padding: 0 $padding_x;
+        margin-bottom: 7.38%;
+
+        &_text {
+            @include font(14px, 26px, "Montserrat-Regular");
+
+            color: $white_0;
+            
+            &--color {
+                color: $yellow_0;
+            }
+
+            &--s {
+                width: 28.77%;
+            }
+
+            &--m {
+                width: 64.04%;
+            }
+        }
+    }
+
+    &__photo {
+        margin-bottom: 7.38%;
+
+        &_list {
+            display: flex;
+        }
+
+        &_item {
+            width: 16.67%;
+            max-height: 280px;
+            overflow: hidden;
+        }
+    }
+
+    &__form {
+        padding: 0 15px 7.38%;
+    }
+}
