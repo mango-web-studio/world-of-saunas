@@ -43,5 +43,9 @@
 @import "service/service.scss";
 // Production
 @import "production/production.scss";
-// Designing Russian baths
-@import "rus_baths/rus_baths.scss";
+// Designing baths
+@import "projects/projects.scss";
+// Designing specific baths
+@import "specific_project/specific_project.scss";
+// Repair
+@import "repair/repair.scss";
