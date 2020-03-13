@@ -30,6 +30,8 @@
 @import "general/page_description/page_description.scss";
 // Paragraph with columns
 @import "general/paragraph_col/paragraph_col.scss";
+// Page list with icons
+@import "general/page_list/page_list.scss";
 
 // Home
 @import "home/home.scss";
@@ -49,3 +51,7 @@
 @import "specific_project/specific_project.scss";
 // Repair
 @import "repair/repair.scss";
+// Portfolio
+@import "portfolio/portfolio.scss";
+// News
+@import "news/news.scss";

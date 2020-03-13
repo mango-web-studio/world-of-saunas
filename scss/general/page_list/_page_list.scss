@@ -1,0 +1,36 @@
+.page_list {
+ 
+    &__list {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        max-width: 200px;
+
+        &_title {
+
+            &_icon {
+                max-width: 36px;
+                margin-bottom: 25px;
+            }
+
+            &_svg {
+                fill: $yellow_0;
+            }
+
+            &_text {
+                @include font(18px, 26px, "Montserrat-Bold");
+
+                color: $yellow_0;
+            }
+        }
+
+        &_description {
+            @include font(14px, 26px, "Montserrat-Regular");
+
+            margin-top: 25px;
+            color: $gray_3;
+        }
+    }
+}

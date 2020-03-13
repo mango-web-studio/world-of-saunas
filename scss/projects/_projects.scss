@@ -1,7 +1,10 @@
 .projects {
 
-    .page_head--bg_img {
-        @include background(url("../img/projects/head_bg.png"));
+    .page_head {
+
+        &--bg_img {
+            @include background(url("../img/projects/head_bg.png"));
+        }
     }
 
     &__paragraph {
