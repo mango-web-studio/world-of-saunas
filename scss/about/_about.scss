@@ -1,0 +1,94 @@
+.about {
+
+    &__paragraph {
+        margin-bottom: 7.38%;
+
+        &_inner {
+            padding: 0 $padding_x;
+        }
+    }
+
+    &__advantages {
+
+        &_inner {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1460px;
+            padding-bottom: 7.38%;
+            border-bottom: 1px solid $gray_2;
+            margin: 0 auto 7.38%;
+            
+            .page_list {
+                width: 75.34%;
+            }
+        }
+
+        &_title {
+            @include font(50px, 50px, 'Montserrat-Medium');
+
+            width: 23.29%;
+            color: $white_0;
+        }
+    }
+
+    &__conditions {
+        padding: 0 $padding_x;
+        margin-bottom: 7.38%;
+
+        &_inner {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1460px;
+            margin: 0 auto;
+        }
+
+        &_title {
+            @include font(50px, 50px, 'Montserrat-Regular');
+
+            width: 47.95%;
+            color: $white_0;
+
+            &_span {
+
+                &--color {
+                    color: $yellow_0;
+                }
+            }
+        }
+
+        &_description {
+            @include font(14px, 26px, 'Montserrat-Regular');
+
+            width: 47.95%;
+            color: $gray_3;
+
+            &_text {
+                margin-bottom: 26px;
+            }
+        }
+    }
+
+    &__photo {
+        margin-bottom: 7.38%;
+    }
+
+    &__description {
+        padding: 0 $padding_x;
+        margin-bottom: 5.46%;
+
+        &_inner {
+            max-width: 1460px;
+            margin: 0 auto;
+            padding: 7.5% 0;
+            border-top: 1px solid $gray_2;
+            border-bottom: 1px solid $gray_2;
+        }
+
+        &_title {
+            @include font(30px, 40px, "Montserrat-Regular");
+
+            margin-bottom: 5.82%;
+            color: $white_0;
+        }
+    }
+}

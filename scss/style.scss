@@ -28,6 +28,10 @@
 @import "general/page_head/page_head.scss";
 // Page description
 @import "general/page_description/page_description.scss";
+// Page gallery
+@import "general/page_gallery/page_gallery.scss";
+// Page photo horizontal
+@import "general/page_photo_horizontal/page_photo_horizontal.scss";
 // Paragraph with columns
 @import "general/paragraph_col/paragraph_col.scss";
 // Page list with icons
@@ -39,6 +43,8 @@
 @import "error/error.scss";
 // Contacts
 @import "contacts/contacts.scss";
+// About
+@import "about/about.scss";
 // Dealers
 @import "dealers/dealers.scss";
 // Service

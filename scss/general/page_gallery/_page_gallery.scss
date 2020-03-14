@@ -1,0 +1,26 @@
+.page_gallery {
+
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        position: relative;
+        width: 16.67%;
+        padding-bottom: 16.67%;
+    }
+
+    &__photo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    &__img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}

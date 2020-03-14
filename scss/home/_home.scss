@@ -430,6 +430,10 @@
             justify-content: space-between;
             padding: 8.2% 0;
             border-bottom: 1px solid $gray_2;
+
+            .page_list {
+                width: 75.34%;
+            }
         }
 
         &_title {
@@ -437,10 +441,6 @@
 
             width: 23.29%;
             color: $white_0;
-        }
-
-        &_description {
-            width: 75.34%;
         }
 
         &_list {
