@@ -1,3 +1,22 @@
+// <div class="form__wrap">
+//     <p class="form__title">
+//         <span class="form__title_span form__title_span--color">
+//             Для замовлення сервісного обслуговування
+//         </span>
+//         Залиште свої <br>
+//         контактні дані!
+//     </p>
+//     <form action="" method="POST" class="form" id="communication" name="communication">
+//         <input class="form__input form__input--name" type="text" name="name" id="name" placeholder="Ім'я*" required>
+//         <input class="form__input form__input--phone" type="tel" name="phone" id="phone" placeholder="Телефон*" required>
+//         <input class="form__input form__input--email" type="email" name="email" id="email" placeholder="Email">
+//         <input class="form__input form__input--message" type="text" name="message" id="message" placeholder="Хочете щось запитати?">
+//         <button class="form__button" type="submit">
+//             Замовити
+//         </button>
+//     </form>
+// </div>
+
 .form {
     display: flex;
     flex-direction: column;

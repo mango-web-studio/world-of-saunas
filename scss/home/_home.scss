@@ -142,6 +142,8 @@
     }
 
     &__construction {
+        @extend %center_block;
+
         padding: 9.29% 0 7.1%;
     }
 
