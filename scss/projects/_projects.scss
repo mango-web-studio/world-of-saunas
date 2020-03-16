@@ -32,63 +32,7 @@
 
     &__construction {
         padding: 0 $padding_x;
-
-        &_list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            grid-gap: 30px 3.43%;
-            max-width: 1460px;
-            width: 100%;
-            margin: 0 auto 7.38%;
-        }
-
-        &_link {
-            display: block;
-            overflow: hidden;
-            transition: 0.2s;
-
-            &:hover {
-                border-radius: 5px;
-                box-shadow: 0 0 15px 2px $yellow_0;
-            }
-        }
-
-        &_item {
-            position: relative;
-        }
-
-        &_img {
-            width: 100%;
-        }
-
-        &_description {
-            position: relative;
-            width: 55%;
-            padding: 6.12%;
-            margin: -24.46% 0 6.12% auto;
-            background-color: $black_0;
-        }
-
-        &_category {
-            @include font(10px, 18px, 'Montserrat-Bold');
-
-            margin-bottom: 5px;
-            color: $gray_1;
-            text-transform: uppercase;
-        }
-
-        &_title {
-            @include font(20px, 24px, 'Montserrat-Bold');
-
-            margin-bottom: 30px;
-            color: $white_0;
-        }
-
-        &_span {
-            @include font(14px, 18px, 'Montserrat-Regular');
-
-            color: $yellow_0;
-        }
+        margin-bottom: 7.38%;
     }
 
     &__photo {

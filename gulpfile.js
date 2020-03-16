@@ -1,10 +1,13 @@
 // Initialize modules
-const gulp = require('gulp');
-const sass = require('gulp-sass');
-sass.compiler = require('node-sass');
+const gulp         = require('gulp');
+const sass         = require('gulp-sass');
+sass.compiler      = require('node-sass');
 const autoprefixer = require('gulp-autoprefixer');
-const sourcemaps = require('gulp-sourcemaps');
-const browserSync = require('browser-sync').create();
+const sourcemaps   = require('gulp-sourcemaps');
+const browserSync  = require('browser-sync').create();
+const iconfont     = require('gulp-iconfont');
+const iconfontCss  = require('gulp-iconfont-css');
+const fontName     = 'iconsfont';
 
 
 var paths = {
@@ -19,6 +22,13 @@ var paths = {
     html: {
         src: './*.html',
         dest: './'
+    },
+    iconFont: {
+        src: './img/svg/*.svg',
+        path: './scss/templates/_icons.scss',
+        targetPath: '../../scss/_icons.scss',
+        fontPath: '../fonts/iconsfont/',
+        dest: './fonts/iconsfont/'
     }
 };
 
@@ -32,6 +42,29 @@ function styles() {
         .pipe(gulp.dest(paths.styles.dest))
         .pipe(browserSync.reload({stream: true}));
 }
+
+
+function icons(){
+	// var runTimestamp = Math.round(Date.now()/1000);
+	
+	gulp.src([iconFont.src])
+	.pipe(iconfontCss({
+	  fontName:   fontName,
+	  path:       paths.iconFont.path,
+	  targetPath: paths.iconFont.targetPath,
+	  fontPath:   paths.iconFont.fontPath
+	}))
+	// .pipe(gulp.dest('fonts/icons/'))
+	.pipe(iconfont({
+		fontName: fontName,
+		startUnicode: false,
+		prependUnicode: false,
+		fontHeight: 1001,
+		normalize: true,
+		formats: ['ttf', 'eot', 'woff', 'svg', 'woff2'],
+	}))
+	.pipe(gulp.dest(iconFont.dest));
+};
 
 
 function watch() {
@@ -58,4 +91,5 @@ function server() {
 // exports.styles = styles;
 // exports.scripts = scripts;
 // exports.watch = watch;
+exports.icons = icons;
 exports.server = server;
