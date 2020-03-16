@@ -1,22 +1,25 @@
 .about {
 
     &__paragraph {
+        padding: 0 $padding_x;
         margin-bottom: 7.38%;
 
         &_inner {
-            padding: 0 $padding_x;
+            @extend %center_block;
         }
     }
 
     &__advantages {
+        padding: 0 $padding_x;
+        margin-bottom: 7.38%;
 
         &_inner {
+            @extend %center_block;
+
             display: flex;
             justify-content: space-between;
-            max-width: 1460px;
             padding-bottom: 7.38%;
             border-bottom: 1px solid $gray_2;
-            margin: 0 auto 7.38%;
             
             .page_list {
                 width: 75.34%;

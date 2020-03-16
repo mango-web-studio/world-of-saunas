@@ -10,9 +10,6 @@
 .page_description {
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    max-width: 1460px;
-    margin: 0 auto;
 
     &__paragraph {
         @include font(14px, 26px, "Montserrat-Regular");

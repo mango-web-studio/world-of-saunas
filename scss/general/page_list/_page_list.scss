@@ -127,11 +127,14 @@
             max-width: 200px;
 
             &_icon {
-                max-width: 36px;
+                width: 36px;
+                height: 46px;
                 margin-bottom: 25px;
             }
 
             &_svg {
+                width: 100%;
+                height: 100%;
                 fill: $yellow_0;
             }
 

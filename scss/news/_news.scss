@@ -1,12 +1,5 @@
 .news {
 
-    .page_head {
-
-        &--bg_img {
-            @include background(url("../img/news/head_bg.png"));
-        }
-    }
-
     &__head {
         padding: 0 $padding_x;
 
@@ -58,6 +51,10 @@
     &__paragraph {
         padding: 0 $padding_x;
         margin-bottom: 5.46%;
+
+        &_inner {
+            @extend %center_block;
+        }
     }
 
     &__description {
@@ -65,8 +62,7 @@
         margin-bottom: 5.46%;
 
         &_inner {
-            max-width: 1460px;
-            margin: 0 auto;
+            @extend %center_block;
         }
 
         &_title {

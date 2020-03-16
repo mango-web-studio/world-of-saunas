@@ -3,6 +3,10 @@
     &__description {
         padding: 0 $padding_x;
         margin-bottom: 7.38%;
+
+        &_inner {
+            @extend %center_block;
+        }
     }
 
     &__paragraph {
@@ -17,6 +21,11 @@
     }
 
     &__form {
-        padding: 0 $padding_x 7.38%;
+        padding: 0 $padding_x;
+        margin-bottom: 7.38%;
+
+        &_inner {
+            @extend %center_block;
+        }
     }
 }

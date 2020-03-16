@@ -36,6 +36,10 @@
         padding: 0 $padding_x;
         margin-bottom: 7.38%;
 
+        &_inner {
+            @extend %center_block;
+        }
+
         &_text {
             @include font(14px, 26px, "Montserrat-Regular");
 
@@ -60,6 +64,11 @@
     }
 
     &__form {
-        padding: 0 15px 7.38%;
+        padding: 0 15px;
+        margin-bottom: 7.38%;
+
+        &_inner {
+            @extend %center_block;
+        }
     }
 }

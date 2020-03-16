@@ -1,15 +1,12 @@
 .projects {
 
-    .page_head {
-
-        &--bg_img {
-            @include background(url("../img/projects/head_bg.png"));
-        }
-    }
-
     &__paragraph {
         padding: 0 $padding_x;
         margin-bottom: 7.38%;
+
+        &_inner {
+            @extend %center_block;
+        }
 
         &_text {
             @include font(14px, 26px, "Montserrat-Regular");
@@ -33,6 +30,10 @@
     &__construction {
         padding: 0 $padding_x;
         margin-bottom: 7.38%;
+
+        &_inner {
+            @extend %center_block;
+        }
     }
 
     &__photo {
@@ -40,6 +41,11 @@
     }
 
     &__form {
-        padding: 0 15px 7.38%;
+        padding: 0 $padding_x;
+        margin-bottom: 7.38%;
+
+        &_inner {
+            @extend %center_block;
+        }
     }
 }
