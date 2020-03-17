@@ -1,4 +1,4 @@
-.news {
+.specific_news {
 
     &__head {
         padding: 0 $padding_x;
@@ -14,6 +14,7 @@
 
         &_image {
             margin-right: 45px;
+            max-width: 100px;
         }
 
         &_title_wrap {
