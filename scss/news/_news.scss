@@ -1,0 +1,140 @@
+.news {
+
+    &__inner {
+        display: flex;
+    }
+
+    &__left {
+        width: 50%;
+        border-right: 1px solid $gray_0;
+
+        .page_head {
+            width: auto;
+            padding-bottom: 34.35%;
+            border-bottom: 1px solid $gray_0;
+
+            &__content {
+                width: calc(100% - 185px);
+                left: 185px;
+                transform: translate(0, -50%);
+            }
+        }
+
+        .news__block {
+            padding: 14.22% 15px 14.22% 185px;
+        }
+    }
+
+    &__block {
+        border-bottom: 1px solid $gray_0;
+
+        &_link {
+            display: block;
+            max-width: 520px;
+            padding: 10px;
+            transition: 0.2s;
+
+            &:hover {
+                border-radius: 5px;
+                box-shadow: 0 0 15px 2px $yellow_0;
+            }
+        }
+
+        &_date {
+            @include font(14px, 14px, "Montserrat-Regular");
+
+            margin-bottom: 5.77%;
+            color: $gray_1;
+        }
+
+        &_title {
+            @include font(38px, 45px, "Montserrat-Bold");
+
+            margin-bottom: 13.46%;
+            color: $white_0;
+        }
+
+        &_img {
+            margin-bottom: 13.46%;
+        }
+
+        &_more {
+            @include font(14px, 14px, "Montserrat-Regular");
+
+            color: $yellow_0;
+            text-transform: uppercase;
+        }
+    }
+
+    &__right {
+        width: 50%;
+
+        .news__block {
+            padding: 14.22% 185px 14.22% 15px;
+
+            &_link {
+                margin-left: auto;
+            }
+        }
+    }
+
+    &__pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 7.1% $padding_x;
+
+        &_list {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &_item {
+            margin: 0 7px;
+        }
+
+        &_link {
+            @include font(16px, 24px, "Montserrat-Bold");
+
+            display: block;
+            color: $gray_1;
+            transition: 0.2s;
+
+            &:hover {
+                color: $white_0;
+                transform: scale(1.5);
+            }
+
+            &.active {
+                color: $white_0;
+            }
+
+            &_prev {
+                width: 0;
+                height: 0;
+                border: 6px solid transparent;
+                border-right-color: $gray_1;
+                border-left: 0;
+                margin-right: 25px;
+
+                &:hover {
+                    border-right-color: $white_0;
+                }
+            }
+
+            &_next {
+                width: 0;
+                height: 0;
+                border: 6px solid transparent;
+                border-left-color: $gray_1;
+                border-right: 0;
+                margin-left: 25px;
+
+                &:hover {
+                    border-left-color: $white_0;
+                }
+            }
+        }
+    }
+}
