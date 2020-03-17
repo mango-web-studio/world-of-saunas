@@ -4,6 +4,8 @@
 @import "mixins.scss";
 @import "reset.scss";
 
+// Animation
+@import "general/animation/animation.scss";
 // Header
 @import "general/header/header.scss";
 // Side
@@ -67,3 +69,5 @@
 @import "news/news.scss";
 // Specific news
 @import "specific_news/specific_news.scss";
+// Instructions
+@import "instructions/instructions.scss";

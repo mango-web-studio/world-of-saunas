@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    $('a[href="#"]').click( (e) => e.preventDefault() );
+    // $('a[href="#"]').click( (e) => e.preventDefault() );
 
     // Home sliders
     if ($('.home__slider_list')) {
@@ -111,5 +111,10 @@ $(document).ready(function() {
         $('#popup_callback').hasClass('visible')
             ? $('body').css({ overflow: 'hidden' })
             : $('body').css({ overflow: 'visible' });
+    });
+
+    var scroll = new SmoothScroll('a[href*="#"]', {
+        speed: 500,
+        speedAsDuration: true
     });
 });

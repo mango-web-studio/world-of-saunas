@@ -1,5 +1,6 @@
 html {
 	font-size: $base_font_size;
+	scroll-behavior: smooth;
 }
 
 *, *::before, *::after {

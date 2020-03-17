@@ -1,0 +1,116 @@
+.instructions {
+
+    &__nav {
+        padding: 0 $padding_x;
+        margin-bottom: 6%;
+
+        &_list {
+            @extend %center_block;
+    
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 25px;
+            border-bottom: 1px solid $gray_0;
+        }
+
+        &_link {
+            @include font(14px, 20px, "Montserrat-Regular");
+
+            color: $gray_6;
+            text-transform: uppercase;
+            transition: 0.2s;
+
+            &:hover {
+                color: $yellow_0;
+            }
+        }
+    }
+
+    &__manufacturer {
+        padding: 0 $padding_x;
+
+        &_list {
+            @extend %center_block;
+
+            columns: 100px 2;
+            column-gap: 5.56%;
+            padding-bottom: 4.44%;
+        }
+
+        &_item {
+            margin-bottom: 11.6%;
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+
+        &_name {
+            @include font(20px, 30px, "Montserrat-Bold");
+
+            display: flex;
+            align-items: center;
+            min-height: 75px;
+            padding: 10px 5.8%;
+            border: 1px solid $gray_0;
+            background-color: $gray_0;
+            color: $yellow_0;
+        }
+
+        &_title {
+            @include font(20px, 30px, "Montserrat-Bold");
+
+            display: flex;
+            align-items: center;
+            min-height: 75px;
+            padding: 10px 5.8%;
+            border: 1px solid $gray_0;
+            border-top: 0;
+            color: $white_0;
+        }
+
+        &_model {
+
+            &_item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                min-height: 48px;
+                padding: 10px 5.8%;
+                border: 1px solid $gray_0;
+                border-top: 0;
+            }
+
+            &_name {
+                @include font(14px, 20px, "Montserrat-Regular");
+
+                color: $gray_3;
+            }
+
+            &_link {
+
+                &:hover {
+
+                    .instructions__manufacturer_model_link_svg {
+                        animation: shake 2s infinite;
+                    }
+                }
+
+                &_icon {
+                    display: inline-block;
+                    width: 10px;
+                    margin-right: 5px;
+                }
+
+                &_svg {
+                    fill: $yellow_0;
+                }
+
+                &_text {
+                    @include font(14px, 20px, "Montserrat-Regular");
+
+                    color: $yellow_0;    
+                }
+            }
+        }
+    }
+}
