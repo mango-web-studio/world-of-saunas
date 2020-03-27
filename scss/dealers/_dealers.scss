@@ -6,9 +6,8 @@
         padding: 65px $padding_x;
 
         &_inner {
-            width: 100%;
             max-width: 600px;
-            margin: 0 auto;
+            margin-left: 170px;
         }
     }
 
@@ -51,7 +50,7 @@
         padding: 6.67% 15px;
         border: 0;
         background-color: $yellow_0;
-        margin-bottom: 15.83%;
+        margin-bottom: 95px;
         color: $black_0;
         cursor: pointer;
     }
@@ -64,15 +63,15 @@
         &_inner {
             display: flex;
             align-items: flex-end;
-            width: 100%;
             height: 100%;
             max-width: 570px;
-            margin: 0 auto;
+            margin-right: 170px;
+            margin-left: auto;
         }
     }
 
     &__form {
-        margin-bottom: 16.66%;
+        margin-bottom: 95px;
 
         &_bottom {
             display: flex;
@@ -84,6 +83,7 @@
             @include font(14px, 20px, "Montserrat-Regular");
 
             color: $gray_6;
+            text-align: right;
         }
     }
 
@@ -126,6 +126,84 @@
 
         &:hover {
             border-color: $yellow_0;
+        }
+    }
+}
+
+// 0 - 1439
+@include respond-to(desktop_plus) {
+
+    .dealers {
+
+        &__button {
+            margin-bottom: 50px;
+        }
+
+        &__form {
+            margin-bottom: 50px;
+        }
+    }
+}
+
+// 0 - 1279
+@include respond-to(desktop) {
+
+    .dealers {
+
+        &__left {
+
+            &_inner {
+                max-width: none;
+                margin: 0 auto;
+            }
+        }
+
+        &__right {
+
+            &_inner {
+                margin: 0 auto;
+            }
+        }
+
+        &__button {
+            margin-bottom: 0;
+        }
+
+        &__form {
+            margin-bottom: 0;
+        }
+    }
+}
+
+// 0 - 767
+@include respond-to(mobile) {
+
+    .dealers {
+        flex-direction: column;
+
+        &__left {
+            width: 100%;
+            padding: 15px 15px 25px;
+        }
+
+        &__header {
+            margin-bottom: 15px;
+        }
+
+        &__paragraph {
+            margin-bottom: 25px;
+        }
+
+        &__button {
+            display: block;
+            max-width: 570px;
+            padding: 20px;
+            margin: 0 auto;
+        }
+
+        &__right {
+            width: 100%;
+            padding: 20px 15px 45px;
         }
     }
 }

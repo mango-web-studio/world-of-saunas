@@ -3,7 +3,7 @@ $(document).ready(function() {
     // $('a[href="#"]').click( (e) => e.preventDefault() );
 
     // Home sliders
-    if ($('.home__slider_list')) {
+    if ($('.home__slider_list').length) {
         $('.home__slider_list').slick({
             infinite: false,
             slidesToShow: 1,
@@ -25,7 +25,7 @@ $(document).ready(function() {
             ]
         });
     }
-    if ($('.home__portfolio_slider_list')) {
+    if ($('.home__portfolio_slider_list').length) {
         //custom function showing current slide
         let $status = $('.home__portfolio_slider_pagination');
         let $slickElement = $('.home__portfolio_slider_list');
@@ -113,8 +113,15 @@ $(document).ready(function() {
             : $('body').css({ overflow: 'visible' });
     });
 
-    var scroll = new SmoothScroll('a[href*="#"]', {
-        speed: 500,
-        speedAsDuration: true
-    });
+    // var scroll = new SmoothScroll('a[href*="#"]', {
+    //     speed: 500,
+    //     speedAsDuration: true
+    // });
+
+    // Adding border bottom to header
+    if ( $('#contacts').length || $('#dealers').length || $('#error').length || $('#news').length || $('#portfolio').length
+        || $('#instructions').length || $('#repair').length || $('#about').length || $('#service').length || $('#production').length ) {
+    
+        $('.header__nav_search_callback').css( "border-bottom", "1px solid #333333" );
+    }
 });

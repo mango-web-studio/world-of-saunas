@@ -22,7 +22,8 @@
 .page_head {
     position: relative;
     width: 100%;
-    padding-bottom: 17.76%;
+    // padding-bottom: 17.76%;
+    padding: 3.39% 0;
 
     &__bg {
         position: absolute;
@@ -46,12 +47,14 @@
     }
 
     &__content {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100%;
-        max-width: 1460px;
+        @extend %center_block;
+
+        // position: absolute;
+        // top: 50%;
+        // left: 50%;
+        // transform: translate(-50%, -50%);
+        // width: 100%;
+        // max-width: 1460px;
         padding: 0 $padding_x;
     }
 
