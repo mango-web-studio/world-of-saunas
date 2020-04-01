@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    // $('a[href="#"]').click( (e) => e.preventDefault() );
+    // HOME PAGE
 
     // Home sliders
     if ($('.home__slider_list').length) {
@@ -113,15 +113,50 @@ $(document).ready(function() {
             : $('body').css({ overflow: 'visible' });
     });
 
-    // var scroll = new SmoothScroll('a[href*="#"]', {
-    //     speed: 500,
-    //     speedAsDuration: true
-    // });
-
     // Adding border bottom to header
     if ( $('#contacts').length || $('#dealers').length || $('#error').length || $('#news').length || $('#portfolio').length
         || $('#instructions').length || $('#repair').length || $('#about').length || $('#service').length || $('#production').length ) {
     
-        $('.header__nav_search_callback').css( "border-bottom", "1px solid #333333" );
+        $('.header__nav_search_callback').addClass( "header--border" );
+    }
+
+
+    // INSTRUCTIONS PAGE
+
+    // Smooth scroll for 'instruction' page
+    // Select all links with hashes
+    $('a[href*="#"]')
+    // Remove links that don't actually link to anything
+    .not('[href="#"]')
+    .not('[href="#0"]')
+    .click(function(event) {
+        // On-page links
+        if (
+            location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+            && 
+            location.hostname == this.hostname
+        ) {
+            // Figure out element to scroll to
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            // Does a scroll target exist?
+            if (target.length) {
+                // Only prevent default if animation is actually gonna happen
+                event.preventDefault();
+                $('html, body').animate({
+                    scrollTop: target.offset().top
+                });
+            }
+        }
+    });
+
+    if ($('#instructions').length) {
+        if ($(window).width() <= 768) {
+            $('.instructions__manufacturer').click(function(e) {
+                if ($(e.target).hasClass('instructions__manufacturer_name')) {
+                    $(e.target).next().slideToggle()
+                }
+            })
+        }
     }
 });

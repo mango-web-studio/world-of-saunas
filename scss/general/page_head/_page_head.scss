@@ -55,15 +55,36 @@
         // transform: translate(-50%, -50%);
         // width: 100%;
         // max-width: 1460px;
-        padding: 0 $padding_x;
+        // padding: 0 $padding_x;
     }
 
     &__title {
         @include font(60px, 65px, "Montserrat-Bold");
 
-        width: 100%;
-        max-width: 1460px;
-        margin: 0 auto;
+        // width: 100%;
+        // max-width: 1460px;
+        // margin: 0 auto;
         color: $white_0;
+    }
+}
+
+// 0 - 1279
+@include respond-to(desktop) {
+
+    .page_head {
+        padding: 3.39% $padding_x;
+    }
+}
+
+// 0 - 767
+@include respond-to(mobile) {
+
+    .page_head {
+        padding: 20px $padding_x;
+
+        &__title {
+            font-size: 3.67rem;
+            line-height: 3.67rem;
+        }
     }
 }

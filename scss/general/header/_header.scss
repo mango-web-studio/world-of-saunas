@@ -9,6 +9,10 @@
     background-color: $black_0;
     z-index: 9;
 
+    &--border {
+        border-bottom: 1px solid $gray_0;
+    }
+
     &__logo {
         width: 185px;
         height: 100%;

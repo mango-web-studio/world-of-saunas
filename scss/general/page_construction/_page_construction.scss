@@ -144,3 +144,22 @@
         color: $yellow_0;
     }
 }
+
+// 0 - 767
+@include respond-to(mobile) {
+
+    .page_construction {
+
+        &__list {
+            grid-template-columns: none;
+            grid-auto-flow: column;
+            grid-gap: 30px;
+            padding: 0 $padding_x;
+            overflow: auto;
+        }
+
+        &__item {
+            width: 220px;
+        }
+    }
+}

@@ -563,7 +563,7 @@
 
             &_paragraph {
                 max-width: none;
-                padding: 0 $padding_x;
+                padding: 8.2% $padding_x 0;
             }
 
             &_subtitle {
@@ -608,6 +608,10 @@
             &_inner {
                 max-width: none;
                 padding: 55px $padding_x;
+
+                .page_list {
+                    width: 100%;
+                }
             }
         }
         
@@ -741,33 +745,8 @@
         }
 
         &__construction {
-
-            &_list {
-                display: flex;
-                overflow-y: hidden;
-                padding: 20px 15px 50px;
-                margin-top: -40px;
-                -ms-overflow-style: none;
-
-                &::-webkit-scrollbar {
-                    display: none;
-                }
-            }
-
-            &_item {
-                flex-shrink: 0;
-                margin-right: 30px;
-                min-width: 200px;
-                width: 35%;
-
-                &:last-child {
-                    margin-right: 0;
-                }
-            }
-
-            &_title {
-                margin-bottom: 12%;
-            }
+            padding: 0 0 50px;
+            margin-top: -45px;
         }
 
         &__portfolio {
