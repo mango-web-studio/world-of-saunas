@@ -59,3 +59,32 @@
         object-fit: cover;
     }
 }
+
+// 0 - 767
+@include respond-to(mobile) {
+
+    .page_gallery {
+
+        &__list {
+            overflow-x: scroll;
+        }
+
+        &__item {
+            flex-shrink: 0;
+            width: 200px;
+            padding-bottom: 200px;
+        }
+    }
+}
+
+// 0 - 479
+@include respond-to(mobile_small) {
+
+    .page_gallery {
+
+        &__item {
+            width: 125px;
+            padding-bottom: 125px;
+        }
+    }
+}

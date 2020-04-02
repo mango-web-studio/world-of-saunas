@@ -237,6 +237,10 @@
         &__left {
             width: 100%;
 
+            .page_head {
+                padding: 15px $padding_x 30px;
+            }
+
             .news__block {
                 padding: 30px 15px;
             }
@@ -266,6 +270,14 @@
 
         &__right {
             width: 100%;
+        }
+
+        &__pagination {
+            padding: 30px $padding_x;
+
+            &_link {
+                font-size: 2rem;
+            }
         }
     }
 }

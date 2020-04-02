@@ -48,15 +48,16 @@
 @include respond-to(mobile) {
 
     .breadcrumb {
+        margin-bottom: 60px;
 
         &__item {
             font-size: 1.8rem;
-            line-height: 2rem;
+            line-height: 2.67rem;
         }
 
         &__link {
             font-size: 1.8rem;
-            line-height: 2rem;
+            line-height: 2.67rem;
         }
     }
 }

@@ -22,7 +22,6 @@
 .page_head {
     position: relative;
     width: 100%;
-    // padding-bottom: 17.76%;
     padding: 3.39% 0;
 
     &__bg {
@@ -43,27 +42,17 @@
     }
 
     &--bg_img {
-        margin-bottom: 7.38%;
+        margin-bottom: 7.1%;
+        padding-bottom: 5.74%;
     }
 
     &__content {
         @extend %center_block;
-
-        // position: absolute;
-        // top: 50%;
-        // left: 50%;
-        // transform: translate(-50%, -50%);
-        // width: 100%;
-        // max-width: 1460px;
-        // padding: 0 $padding_x;
     }
 
     &__title {
-        @include font(60px, 65px, "Montserrat-Bold");
+        @include font(60px, 88px, "Montserrat-Bold");
 
-        // width: 100%;
-        // max-width: 1460px;
-        // margin: 0 auto;
         color: $white_0;
     }
 }
@@ -80,11 +69,16 @@
 @include respond-to(mobile) {
 
     .page_head {
-        padding: 20px $padding_x;
+        padding: 15px $padding_x 20px;
+        margin-bottom: 35px;
+
+        &--bg_img {
+            padding-bottom: 80px;
+        }
 
         &__title {
             font-size: 3.67rem;
-            line-height: 3.67rem;
+            line-height: 5.33rem;
         }
     }
 }

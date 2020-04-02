@@ -793,30 +793,14 @@
         }
 
         &__communication {
+            padding: 50px 0;
 
             &_category {
                 display: none;
             }
 
-            &_form_wrap {
-                flex-direction: column;
-                width: 100%;
-                max-width: 600px;
-                margin: 0 auto;
-            }
-
-            &_title {
-                width: 100%;
-                margin-bottom: 30px;
-            }
-
             &_form {
                 width: 100%;
-            }
-
-            &_input {
-                margin-bottom: 15px;
-                font-size: 1.8rem;
             }
         }
 

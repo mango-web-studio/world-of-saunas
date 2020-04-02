@@ -95,3 +95,83 @@
         }
     }
 }
+
+// 0 - 767
+@include respond-to(mobile) {
+
+    .about {
+
+        &__paragraph {
+            margin-bottom: 60px;
+
+            &_inner {
+
+                .paragraph_col {
+
+                    &__text {
+                        font-size: 1.83rem;
+                        line-height: 3rem;
+                    }
+                }
+            }
+        }
+
+        &__advantages {
+            margin-bottom: 50px;
+
+            &_inner {
+                flex-direction: column;
+                padding-bottom: 50px;
+
+                .page_list {
+                    width: 100%;
+                }
+            }
+
+            &_title {
+                width: 100%;
+                margin-bottom: 40px;
+            }
+        }
+
+        &__photo {
+            margin-bottom: 35px;
+        }
+
+        &__description {
+            margin-bottom: 35px;
+
+            &_inner {
+                padding: 35px 0;
+            }
+
+            &_title {
+                margin-bottom: 50px;
+            }
+        }
+
+        &__conditions {
+            margin-bottom: 35px;
+
+            &_inner {
+                flex-direction: column;
+            }
+
+            &_title {
+                width: 100%;
+                margin-bottom: 35px;
+            }
+
+            &_description {
+                width: 100%;
+
+                &_text {
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}

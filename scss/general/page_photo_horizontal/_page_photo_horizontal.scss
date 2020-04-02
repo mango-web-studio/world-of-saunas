@@ -18,3 +18,12 @@
         object-fit: cover;
     }
 }
+
+// 0 - 767
+@include respond-to(mobile) {
+
+    .page_photo_horizontal {
+        padding-bottom: 59.38%;
+        margin-bottom: 55px;
+    }
+}

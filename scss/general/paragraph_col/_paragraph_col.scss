@@ -61,3 +61,28 @@
         }
     }
 }
+
+// 0 - 767
+@include respond-to(mobile) {
+
+    .paragraph_col {
+
+        &__head {
+            margin-bottom: 30px;
+        }
+
+        &__title {
+            font-size: 5rem;
+            line-height: 5.83rem;
+        }
+
+        &__list {
+            grid-gap: 35px;
+        }
+
+        &__text {
+            font-size: 1.83rem;
+            line-height: 3rem;
+        }
+    }
+}

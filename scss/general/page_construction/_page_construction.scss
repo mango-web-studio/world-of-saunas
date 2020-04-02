@@ -154,12 +154,18 @@
             grid-template-columns: none;
             grid-auto-flow: column;
             grid-gap: 30px;
-            padding: 0 $padding_x;
             overflow: auto;
         }
 
         &__item {
             width: 220px;
+        }
+
+        &__link {
+            
+            &:hover {
+                box-shadow: none;
+            }
         }
     }
 }

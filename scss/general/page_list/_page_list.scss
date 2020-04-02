@@ -123,6 +123,10 @@
         max-width: 310px;
         padding-right: 15px;
 
+        &:last-child {
+            padding-right: 0;
+        }
+
         &_title {
             max-width: 200px;
 
@@ -150,6 +154,47 @@
 
             margin-top: 25px;
             color: $gray_3;
+        }
+    }
+}
+
+// 0 - 767
+@include respond-to(mobile) {
+
+    .page_list {
+        
+        &__list {
+            overflow-x: scroll;
+        }
+        
+        &__item {
+            flex-shrink: 0;
+            width: 200px;
+            padding-right: 0;
+            margin-right: 40px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &_title {
+
+                &_icon {
+                    width: 30px;
+                    margin-bottom: 20px;
+                }
+
+                &_text {
+                    font-size: 3rem;
+                    line-height: 3.67rem;
+                }
+            }
+
+            &_description {
+                font-size: 1.83rem;
+                line-height: 3rem;
+                margin-top: 20px;
+            }
         }
     }
 }
