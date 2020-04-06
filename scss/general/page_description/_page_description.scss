@@ -29,3 +29,22 @@
         }
     }
 }
+
+// 0 - 767
+@include respond-to(mobile) {
+
+    .page_description {
+        flex-direction: column;
+
+        &__paragraph {
+            width: 100%;
+            margin-bottom: 35px;
+            font-size: 1.83rem;
+            line-height: 3rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

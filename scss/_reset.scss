@@ -22,10 +22,14 @@ body {
 	// 	"side main main"
 	// 	"side footer footer";
 	background-color: $black_0;
-	-ms-overflow-style: none;
 
-	&::-webkit-scrollbar {
-		display: none;
+	&,
+	* {
+		-ms-overflow-style: none;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
 	}
 }
 

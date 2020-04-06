@@ -29,3 +29,26 @@
         }
     }
 }
+
+// 0 - 767
+@include respond-to(mobile) {
+
+    .production {
+
+        &__description {
+            margin-bottom: 45px;
+        }
+
+        &__paragraph {
+            margin-bottom: 45px;
+
+            &_inner {
+                padding-bottom: 45px;
+            }
+        }
+
+        &__form {
+            margin-bottom: 40px;
+        }
+    }
+}

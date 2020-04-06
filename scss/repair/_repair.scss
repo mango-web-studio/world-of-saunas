@@ -72,3 +72,39 @@
         }
     }
 }
+
+// 0 - 767
+@include respond-to(mobile) {
+
+    .repair {
+
+        &__menu {
+            margin-bottom: 30px;
+
+            &_list {
+                grid-template-columns: repeat(5, 120px) 85px;
+                grid-gap: 20px;
+                padding: 0 0 30px;
+                border-top: 0;
+                overflow-x: scroll;
+            }
+
+            &_link {
+                font-size: 1.83rem;
+                line-height: 3rem;
+            }
+        }
+
+        &__paragraph {
+            margin-bottom: 30px;
+        }
+
+        &__photo {
+            margin-bottom: 30px;
+        }
+
+        &__form {
+            margin-bottom: 40px;
+        }
+    }
+}

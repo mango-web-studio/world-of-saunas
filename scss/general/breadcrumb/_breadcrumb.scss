@@ -19,20 +19,26 @@
 
     &__list {
         display: flex;
+        flex-wrap: wrap;
     }
 
     &__item {
         @include font(14px, 20px, "Montserrat-Regular");
 
         display: flex;
+        padding-right: 7px;
         color: $gray_11;
 
-        & + .breadcrumb__item {
+        &:before {
+            content: "/\00a0";
+            padding-right: 7px;
+            color: $gray_1;
+        }
 
-            &:before {
-                content: "/\00a0";
-                padding: 0 7px;
-                color: $gray_1;
+        &:first-child {
+
+            &::before {
+                display: none;
             }
         }
     }
@@ -51,12 +57,12 @@
         margin-bottom: 60px;
 
         &__item {
-            font-size: 1.8rem;
+            font-size: 1.83rem;
             line-height: 2.67rem;
         }
 
         &__link {
-            font-size: 1.8rem;
+            font-size: 1.83rem;
             line-height: 2.67rem;
         }
     }

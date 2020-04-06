@@ -65,15 +65,28 @@
     }
 }
 
+// 0 - 1023
+@include respond-to(tablet) {
+
+    .page_head {
+
+        &__title {
+            font-size: 5rem;
+            line-height: 7rem;
+        }
+    }
+}
+
 // 0 - 767
 @include respond-to(mobile) {
 
     .page_head {
         padding: 15px $padding_x 20px;
-        margin-bottom: 35px;
+        margin-bottom: 15px;
 
         &--bg_img {
-            padding-bottom: 80px;
+            min-height: 200px;
+            margin-bottom: 35px;
         }
 
         &__title {
