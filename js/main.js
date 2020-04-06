@@ -75,43 +75,40 @@ $(document).ready(function() {
         $(this).toggleClass('open');
         $('#menu').toggleClass('open');
         $('#menu').hasClass('open')
-            ? $('body').css({ overflow: 'hidden' })
-            : $('body').css({ overflow: 'visible' });
+            ? $('body').addClass('overflow')
+            : $('body').removeClass('overflow');
     });
 
     // Popup Search
-    $('#header__popup_search_btn').click(function() {
-        $('#popup_search').toggleClass('visible');
-        $('#popup_search').hasClass('visible')
-            ? $('body').css({ overflow: 'hidden' })
-            : $('body').css({ overflow: 'visible' });
-    });
-    $('#side__popup_search_btn').click(function() {
-        $('#popup_search').toggleClass('visible');
-        $('#popup_search').hasClass('visible')
-            ? $('body').css({ overflow: 'hidden' })
-            : $('body').css({ overflow: 'visible' });
-    });
-    $('#popup_search__close').click(function() {
-        $('#popup_search').toggleClass('visible');
-        $('#popup_search').hasClass('visible')
-            ? $('body').css({ overflow: 'hidden' })
-            : $('body').css({ overflow: 'visible' });
-    });
+    $(document).click(function(e) {
+        if ($(e.target).closest('#header__popup_search_btn').length || $(e.target).closest('#side__popup_search_btn').length) {
+            $('#popup_search').toggleClass('visible')
+            if ($('#popup_search').hasClass('visible')) {
+                $('body').addClass('overflow')
+                $('#main').addClass('blur')
+            } else {
+                $('body').removeClass('overflow')
+                $('#main').removeClass('blur')
+            }
+        }
+        if ($(e.target).closest('#popup_search__close').length) {
+            $('#popup_search').removeClass('visible')
+            $('body').removeClass('overflow')
+            $('#main').removeClass('blur')
+        }
+    })
 
     // Popup Callback
-    $('#header__callback').click(function() {
-        $('#popup_callback').toggleClass('visible');
-        $('#popup_callback').hasClass('visible')
-            ? $('body').css({ overflow: 'hidden' })
-            : $('body').css({ overflow: 'visible' });
-    });
-    $('#popup_callback__close').click(function() {
-        $('#popup_callback').toggleClass('visible');
-        $('#popup_callback').hasClass('visible')
-            ? $('body').css({ overflow: 'hidden' })
-            : $('body').css({ overflow: 'visible' });
-    });
+    $(document).click(function(e) {
+        if ($(e.target).closest('#header__callback').length) {
+            $('#popup_callback').addClass('visible')
+            $('body').addClass('overflow')
+        }
+        if ($(e.target).closest('#popup_callback__close').length) {
+            $('#popup_callback').removeClass('visible')
+            $('body').removeClass('overflow')
+        }
+    })
 
     // Adding border bottom to header
     if ( $('#contacts').length 

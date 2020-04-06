@@ -119,7 +119,7 @@
         bottom: 0;
         right: 0;
         width: 67.28%;
-        padding: 20px;
+        padding: 15px;
         background-color: $black_0;
     }
 
@@ -142,6 +142,7 @@
         @include font(14px, 18px, 'Montserrat-Regular');
 
         color: $yellow_0;
+        white-space: nowrap;
         text-transform: uppercase;
     }
 }

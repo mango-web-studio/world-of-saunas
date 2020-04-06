@@ -3,6 +3,11 @@
     width: calc(100% - 90px);
     min-height: calc(100vh - 90px);
     margin-left: auto;
+    transition: 0.2s;
+
+    &.blur {
+        filter: blur(6px);
+    }
 }
 
 // 0 - 1439
