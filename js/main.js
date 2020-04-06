@@ -114,9 +114,18 @@ $(document).ready(function() {
     });
 
     // Adding border bottom to header
-    if ( $('#contacts').length || $('#dealers').length || $('#error').length || $('#news').length || $('#portfolio').length
-        || $('#instructions').length || $('#repair').length || $('#about').length || $('#service').length || $('#production').length ) {
-    
+    if ( $('#contacts').length 
+        || $('#dealers').length 
+        || $('#error').length 
+        || $('#news').length 
+        || $('#portfolio').length 
+        || $('#instructions').length 
+        || $('#repair').length 
+        || $('#about').length 
+        || $('#service').length 
+        || $('#production').length 
+        || $('#search').length 
+        ) {
         $('.header__nav_search_callback').addClass( "header--border" );
     }
 

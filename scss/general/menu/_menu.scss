@@ -47,6 +47,7 @@
             color: $black_0;
             white-space: nowrap;
             transition: 0.2s;
+            user-select: none;
 
             &:hover {
                 transform: scale(1.02);
@@ -111,6 +112,7 @@
             display: inline-block;
             overflow: hidden;
             color: $black_0;
+            user-select: none;
 
             &::after {
                 content: "";

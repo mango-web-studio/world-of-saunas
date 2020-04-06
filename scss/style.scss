@@ -4,6 +4,7 @@
 @import "extends.scss";
 @import "reset.scss";
 
+// GENERAL
 // Animation
 @import "general/animation/animation.scss";
 // Header
@@ -26,6 +27,8 @@
 @import "general/form/form.scss";
 // Breadcrumb
 @import "general/breadcrumb/breadcrumb.scss";
+// Pagination
+@import "general/pagination/pagination.scss";
 // Page head
 @import "general/page_head/page_head.scss";
 // Page description
@@ -40,6 +43,7 @@
 @import "general/paragraph_col/paragraph_col.scss";
 // Page list with icons
 @import "general/page_list/page_list.scss";
+
 
 // Home
 @import "home/home.scss";
@@ -71,3 +75,5 @@
 @import "specific_news/specific_news.scss";
 // Instructions
 @import "instructions/instructions.scss";
+// Search
+@import "search/search.scss";

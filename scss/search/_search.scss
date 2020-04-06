@@ -1,0 +1,90 @@
+.search {
+
+    .page_head {
+        margin-bottom: 20px;
+    }
+
+    &__request {
+
+        &_list {
+            @extend %center_block;
+
+            counter-reset: request-item;
+        }
+
+        &_item {
+            counter-increment: request-item;
+            padding: 50px 0;
+            border-top: 1px solid $gray_0;
+        }
+
+        &_link {
+            cursor: pointer;
+        }
+
+        &_title {
+            @include font(18px, 26px, "Montserrat-Bold");
+
+            margin-bottom: 10px;
+            color: $white_0;
+
+            &::before {
+                content: counter(request-item) '.';
+            }
+        }
+
+        &_category {
+            @include font(14px, 24px, "Montserrat-Regular");
+
+            margin-bottom: 15px;
+            color: $gray_3;
+        }
+
+        &_description {
+            @include font(14px, 24px, "Montserrat-Regular");
+
+            color: $white_0;
+        }
+    }
+
+    .pagination {
+        padding: 0 $padding_x 50px;
+    }
+}
+
+// 0 - 1279
+@include respond-to(desktop) {
+
+    .search {
+
+        &__request {
+            padding: 0 $padding_x;
+
+            &_item {
+                padding: 30px 0;
+            }
+        }
+
+        .pagination {
+            padding: 0 $padding_x 30px;
+        }
+    }
+}
+
+// 0 - 767
+@include respond-to(mobile) {
+
+    .search {
+
+        &__request {
+
+            &_item {
+                padding: 20px 0;
+            }
+        }
+
+        .pagination {
+            padding: 0 $padding_x 20px;
+        }
+    }
+}

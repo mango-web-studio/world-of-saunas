@@ -126,64 +126,8 @@
         }
     }
 
-    &__pagination {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .pagination {
         padding: 7.1% $padding_x;
-
-        &_list {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        &_item {
-            margin: 0 7px;
-        }
-
-        &_link {
-            @include font(16px, 24px, "Montserrat-Bold");
-
-            display: block;
-            color: $gray_1;
-            transition: 0.2s;
-
-            &:hover {
-                color: $white_0;
-                transform: scale(1.5);
-            }
-
-            &.active {
-                color: $white_0;
-            }
-
-            &_prev {
-                width: 0;
-                height: 0;
-                border: 6px solid transparent;
-                border-right-color: $gray_1;
-                border-left: 0;
-                margin-right: 25px;
-
-                &:hover {
-                    border-right-color: $white_0;
-                }
-            }
-
-            &_next {
-                width: 0;
-                height: 0;
-                border: 6px solid transparent;
-                border-left-color: $gray_1;
-                border-right: 0;
-                margin-left: 25px;
-
-                &:hover {
-                    border-left-color: $white_0;
-                }
-            }
-        }
     }
 }
 

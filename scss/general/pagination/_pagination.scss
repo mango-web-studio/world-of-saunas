@@ -1,0 +1,113 @@
+// <div class="pagination">
+//     <a href="#" class="pagination__link pagination__link_prev"></a>
+//     <ul class="pagination__list">
+//         <li class="pagination__item">
+//             <a href="#" class="pagination__link active"></a>
+//         </li>
+//         <li class="pagination__item">
+//             <a href="#" class="pagination__link"></a>
+//         </li>
+//         <li class="pagination__item">
+//             <a href="#" class="pagination__link"></a>
+//         </li>
+//         <li class="pagination__item">
+//             <a href="#" class="pagination__link"></a>
+//         </li>
+//         <li class="pagination__item">
+//             <a href="#" class="pagination__link"></a>
+//         </li>
+//         <li class="pagination__item">
+//             <a href="#" class="pagination__link"></a>
+//         </li>
+//         <li class="pagination__item">
+//             <a href="#" class="pagination__link"></a>
+//         </li>
+//         <li class="pagination__item">
+//             <a href="#" class="pagination__link"></a>
+//         </li>
+//         <li class="pagination__item">
+//             <a href="#" class="pagination__link"></a>
+//         </li>
+//         <li class="pagination__item">
+//             <a href="#" class="pagination__link"></a>
+//         </li>
+//     </ul>
+//     <a href="#" class="pagination__link pagination__link_next"></a>
+// </div>
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        counter-reset: pagination-item;
+    }
+
+    &__item {
+        counter-increment: pagination-item;
+    }
+
+    &__link {
+        @include font(16px, 24px, "Montserrat-Bold");
+
+        display: block;
+        padding: 0 7px;
+        color: $gray_1;
+        transition: 0.2s;
+
+        &::before {
+            content: counter(pagination-item);
+        }
+
+        &:hover {
+            color: $white_0;
+            transform: scale(1.5);
+        }
+
+        &.active {
+            color: $white_0;
+            transform: none;
+            cursor: default;
+        }
+
+        &_prev {
+            width: 0;
+            height: 0;
+            padding: 0;
+            border: 6px solid transparent;
+            border-right-color: $gray_1;
+            border-left: 0;
+            margin-right: 25px;
+
+            &::before {
+                display: none;
+            }
+
+            &:hover {
+                border-right-color: $white_0;
+            }
+        }
+
+        &_next {
+            width: 0;
+            height: 0;
+            padding: 0;
+            border: 6px solid transparent;
+            border-left-color: $gray_1;
+            border-right: 0;
+            margin-left: 25px;
+
+            &::before {
+                display: none;
+            }
+
+            &:hover {
+                border-left-color: $white_0;
+            }
+        }
+    }
+}
