@@ -10,6 +10,8 @@
 
         &_title {
             display: flex;
+            justify-content: space-between;
+            align-items: center;
             flex-wrap: wrap;
             width: 100%;
             max-width: 1460px;
@@ -22,26 +24,6 @@
 
         margin-right: 15px;
         color: $white_0;
-    }
-
-    &__select_wrap {
-        @include font(60px, 65px, "Montserrat-Bold");
-
-        position: relative;
-        padding-right: 20px;
-        color: $yellow_0;
-
-        &::after {
-            content: "";
-            position: absolute;
-            right: 0;
-            top: 50%;
-            width: 0;
-            height: 0;
-            border: 5px solid transparent;
-            border-top-color: $yellow_0;
-            border-bottom: 0;
-        }
     }
 
     &__gallery {

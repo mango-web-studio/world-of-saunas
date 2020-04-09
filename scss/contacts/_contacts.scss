@@ -6,7 +6,6 @@
         padding: 65px $padding_x;
 
         &_inner {
-            // width: 100%;
             max-width: 600px;
             margin: 0 auto;
             margin-left: 170px;
@@ -16,28 +15,15 @@
     &__header {
         margin-bottom: 16.67%;
 
+        &_bottom {
+            display: flex;
+            flex-direction: column;
+        }
+
         &_title {
             @include font(60px, 90px, "Montserrat-Bold");
 
-            display: inline-block;
-            margin-right: 15px;
             color: $white_0;
-        }
-
-        &_dropdown {
-            @include font(60px, 90px, "Montserrat-Bold");
-
-            display: inline-block;
-            color: $yellow_0;
-
-            &::after {
-                content: "";
-                display: inline-block;
-                width: 0;
-                height: 0;
-                border: 6px solid transparent;
-                border-top-color: $yellow_0;
-            }
         }
     }
 

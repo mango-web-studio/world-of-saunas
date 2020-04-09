@@ -1,0 +1,21 @@
+
+.select {
+
+    &__wrap {
+        @include font(60px, 90px, "Montserrat-Bold");
+
+        display: inline-flex;
+        align-items: center;
+        color: $yellow_0;
+
+        &::after {
+            content: "";
+            display: inline-block;
+            width: 0;
+            height: 0;
+            margin-left: 15px;
+            border: 6px solid transparent;
+            border-top-color: $yellow_0;
+        }
+    }
+}
