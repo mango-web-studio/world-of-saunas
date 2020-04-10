@@ -168,30 +168,33 @@ $(document).ready(function() {
 
     // NEWS page
     // Masonry Layout (manipulated row spans)
-    function resizeGridItem(item){
-        grid = document.getElementsByClassName("news__list")[0];
-        rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
-        rowSpan = Math.ceil((item.querySelector('div').getBoundingClientRect().height) / rowHeight);
-        item.style.gridRowEnd = "span "+rowSpan;
-    }
-      
-    function resizeAllGridItems(){
+    if (document.documentElement.clientWidth >= 480) {
+
+        function resizeGridItem(item){
+            grid = document.getElementsByClassName("news__list")[0];
+            rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
+            rowSpan = Math.ceil((item.querySelector('div').getBoundingClientRect().height) / rowHeight);
+            item.style.gridRowEnd = "span "+rowSpan;
+        }
+
+        function resizeAllGridItems(){
+            allItems = document.getElementsByClassName("news__item");
+            for(x=0;x<allItems.length;x++){
+                resizeGridItem(allItems[x]);
+            }
+        }
+
+        function resizeInstance(instance){
+            item = instance.elements[0];
+            resizeGridItem(item);
+        }
+
+        window.onload = resizeAllGridItems();
+        window.addEventListener("resize", resizeAllGridItems);
+
         allItems = document.getElementsByClassName("news__item");
         for(x=0;x<allItems.length;x++){
-            resizeGridItem(allItems[x]);
+            imagesLoaded( allItems[x], resizeInstance);
         }
-    }
-    
-    function resizeInstance(instance){
-        item = instance.elements[0];
-        resizeGridItem(item);
-    }
-    
-    window.onload = resizeAllGridItems();
-    window.addEventListener("resize", resizeAllGridItems);
-    
-    allItems = document.getElementsByClassName("news__item");
-    for(x=0;x<allItems.length;x++){
-        imagesLoaded( allItems[x], resizeInstance);
     }
 });
